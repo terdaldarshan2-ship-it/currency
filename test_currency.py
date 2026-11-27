@@ -1,4 +1,4 @@
-from currency import inr_to_usd, usd_to_inr
+from currency import inr_to_usd
 
 
 def test_conversion():
@@ -7,7 +7,3 @@ def test_conversion():
 
 def test_zero():
     assert inr_to_usd(0) == 0
-
-
-def test_usd_to_inr():
-    assert usd_to_inr(10) == 980

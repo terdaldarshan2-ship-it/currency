@@ -1,7 +1,14 @@
-def inr_to_usd(inr):
-    return inr / 98
+from currency import inr_to_usd, usd_to_inr
 
 
-if __name__ == "__main__":
-    amount = float(input("Enter INR: "))
-    print("USD:", round(inr_to_usd(amount), 2))
+def test_inr_to_usd():
+    assert round(inr_to_usd(980), 2) == 10.00
+
+
+def test_usd_to_inr():
+    assert usd_to_inr(10) == 980
+
+
+def test_zero():
+    assert inr_to_usd(0) == 0
+    assert usd_to_inr(0) == 0

@@ -1,7 +1,11 @@
-def inr_to_usd(inr):
-    return inr / 98
+import sys
 
+def convert_currency(inr):
+    # keep your exact conversion logic/rates here
+    usd = inr / 83.0
+    eur = inr / 90.0
+    return usd, eur
 
 if __name__ == "__main__":
-    amount = float(input("Enter INR: "))
-    print("USD:", round(inr_to_usd(amount), 2))
+    amount = float(sys.argv[1]) if len(sys.argv) > 1 else 1000.0
+    print(f"INR: {amount} -> {convert_currency(amount)}")

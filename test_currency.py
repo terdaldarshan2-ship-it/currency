@@ -1,9 +1,7 @@
-from currency import inr_to_usd
-
+from currency import usd_to_inr
 
 def test_conversion():
-    assert round(inr_to_usd(980), 2) == 10.00
-
+    assert usd_to_inr(10) == 980
 
 def test_zero():
-    assert inr_to_usd(0) == 0
+    assert usd_to_inr(0) == 0

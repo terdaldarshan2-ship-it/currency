@@ -1,5 +1,5 @@
-def inr_to_usd(inr):
-    return inr / 98
+def usd_to_inr(usd):     
+    return usd * 98
 
 
 if __name__ == "__main__":
